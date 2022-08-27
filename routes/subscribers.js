@@ -7,7 +7,14 @@ router.get('/',async (req,res)=>{
     // res.send('hello world')
     
     try {
-        const subscribers = await Subscriber.find()
+        const subscribers = await Subscriber.aggregate([
+            {
+                $match:{}
+            },
+            {
+                $group:{_id:"$name",count:{$count:{}}}
+            }
+        ])
         res.json(subscribers)
     } catch (error) {
         res.status(500).json({message:error.message})

@@ -1,9 +1,9 @@
-require('dotenv').config();
+// require('dotenv').config();
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser:true})
+mongoose.connect("mongodb+srv://zmh:testing321321@testing.jdw0o6s.mongodb.net/test",{useNewUrlParser:true})
 
 const db = mongoose.connection
 
@@ -17,6 +17,6 @@ app.use('/api',subscriberRouter)
 
 
 
-app.listen(3000,()=>{
-    console.log("host 3000")
+app.listen(5000,()=>{
+    console.log("host 5000")
 })

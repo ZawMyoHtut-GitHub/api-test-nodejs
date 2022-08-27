@@ -1,0 +1,25 @@
+GET http://localhost:3000/api
+
+###
+GET http://localhost:3000/api/6300e4e83571c18742e1e6d3
+
+###
+POST http://localhost:3000/api
+Content-Type: application/json
+
+{
+    "name":"Zaw Myo Htut",
+    "subscribedToChennel":"Web Dev simplified"
+}
+
+###
+PATCH http://localhost:3000/api/630a0b56e9d3d6dda3de3ce9
+Content-Type: application/json
+
+{
+    "name":"ZMH",
+    "subscribedToChennel":"Web Dev"
+}
+
+###
+DELETE http://localhost:3000/api/6300e3e63571c18742e1e6cf

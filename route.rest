@@ -1,14 +1,14 @@
-GET http://localhost:3000/api
+GET http://localhost:5000/api
 
 ###
 GET http://localhost:3000/api/6300e4e83571c18742e1e6d3
 
 ###
-POST http://localhost:3000/api
+POST http://localhost:5000/api
 Content-Type: application/json
 
 {
-    "name":"Zaw Myo Htut",
+    "name":"H",
     "subscribedToChennel":"Web Dev simplified"
 }
 

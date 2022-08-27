@@ -14,7 +14,7 @@ router.get('/',async (req,res)=>{
     }
 })
 
-one
+// one
 router.get('/:id', getSubscriber, (req,res)=>{
     res.json(res.subscriber)
 })

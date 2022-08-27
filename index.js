@@ -3,8 +3,8 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-mongoose.connect("mongodb+srv://zmh:testing321321@testing.jdw0o6s.mongodb.net/test",{useNewUrlParser:true})
-
+mongoose.connect("mongodb+srv://zmh:testing321321@testing.jdw0o6s.mongodb.net/",{useNewUrlParser:true})
+                //  "mongodb+srv://zmh:testing321321@testing.jdw0o6s.mongodb.net/test"
 const db = mongoose.connection
 const port = process.env.PORT || 5000
 

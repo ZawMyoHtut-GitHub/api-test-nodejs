@@ -1,14 +1,15 @@
 // require('dotenv').config();
 const express = require('express')
 const app = express()
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 
-mongoose.connect("mongodb+srv://zmh:testing321321@testing.jdw0o6s.mongodb.net/test",{useNewUrlParser:true})
+// mongoose.connect("mongodb+srv://zmh:testing321321@testing.jdw0o6s.mongodb.net/test",{useNewUrlParser:true})
 
-const db = mongoose.connection
+// const db = mongoose.connection
+const port = process.env.PORT || 5000
 
-db.on('error',error=>console.log(error))
-db.once('open',()=>console.log('connected to database'))
+// db.on('error',error=>console.log(error))
+// db.once('open',()=>console.log('connected to database'))
 
 app.use(express.json())
 
@@ -17,6 +18,6 @@ app.use('/api',subscriberRouter)
 
 
 
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log("host 5000")
 })
